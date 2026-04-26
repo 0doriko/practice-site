@@ -1,0 +1,19 @@
+name: CI Pipeline
+
+# the trigger. "When someone pushes to main, start the pipeline."
+on:
+  push:
+    branches:
+      - main
+#job - the list of things to do
+jobs:
+  check-site:
+    runs-on: ubuntu-latest # spin up a fresh Linux machine in the cloud
+#steps - the individual tasks in order
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # grab my code from the repo
+
+      - name: Pipeline is running
+        run: echo "Pipeline is running! Site is at https://0doriko.github.io/practice-site"
+      
