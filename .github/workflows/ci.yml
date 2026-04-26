@@ -12,7 +12,7 @@ jobs:
 #steps - the individual tasks in order
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # grab my code from the repo
+        uses: actions/checkout@v5 # grab my code from the repo
 
       - name: Pipeline is running
         run: echo "Pipeline is running! Site is at https://0doriko.github.io/practice-site"
