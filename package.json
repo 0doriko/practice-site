@@ -1,0 +1,22 @@
+{
+  "name": "practice-site",
+  "version": "1.0.0",
+  "description": "Practice Site that runs on GitHub Page",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0doriko/practice-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0doriko/practice-site/issues"
+  },
+  "homepage": "https://github.com/0doriko/practice-site#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
