@@ -1,19 +1,18 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
+// Test 1: Check the page loads and has correct title
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await page.goto('https://0doriko.github.io/practice-site');
+  
+  await expect(page).toHaveTitle('Nami\'s Practice Site');
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+// Test 2: Check the status element exists and says correct message
+test('status message is correct', async ({ page }) => {
+  await page.goto('https://0doriko.github.io/practice-site');
+  
+  const status = await page.locator('#status');
+  await expect(status).toBeVisible();
+  await expect(status).toHaveText('All systems go.');
 });
